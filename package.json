@@ -1,0 +1,22 @@
+{
+  "name": "beer-labels",
+  "version": "1.0.0",
+  "description": "Print beer labels on 3.33x4in Avery labels",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/energee/beer-labels.git"
+  },
+  "author": "energee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/energee/beer-labels/issues"
+  },
+  "homepage": "https://github.com/energee/beer-labels#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0"
+  }
+}

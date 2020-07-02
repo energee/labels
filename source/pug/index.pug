@@ -1,0 +1,39 @@
+-
+  var beers = [
+    {
+      title: 'Mary Sue',
+      description: 'description',
+    },
+    {
+      title: 'Mary Sue',
+      description: 'description',
+    },
+    {
+      title: 'Mary Sue',
+      description: 'description',
+    },
+    {
+      title: 'Mary Sue',
+      description: 'description',
+    },
+    {
+      title: 'Mary Sue',
+      description: 'description',
+    },
+    {
+      title: 'Mary Sue',
+      description: 'description',
+    },
+  ]
+doctype html
+head
+  title 3.3inch x 4inch labels
+  meta(http-equiv='content-type' content='text/html; charset=utf-8')
+  link(href='app/app.css' media='screen, projection, print' rel='stylesheet' type='text/css')
+  script(src='app/app.js')
+.page
+  each beer, key in beers
+    .label(id=key)
+      h1.title(contenteditable="true" id='title'+key class='content')= beer.title
+      figcaption.desc(contenteditable="true" id='desc'+key class='content')= beer.description
+      img.image(src="app/img/Lower Level.svg")
