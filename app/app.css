@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Open+Sans:wght@300&display=swap");
 @page {
   margin: 0mm;
   size: auto; }
@@ -25,6 +26,7 @@ body {
   height: 4in;
   overflow: hidden;
   padding: 0 1.3em;
+  position: relative;
   text-align: center;
   width: 3.333in; }
   .label:nth-child(1), .label:nth-child(2), .label:nth-child(3) {
@@ -39,17 +41,29 @@ body {
   font-family: 'Lora';
   font-size: 50px;
   font-weight: 300;
-  margin: 1em 0; }
+  margin: 40px 0; }
 
 .desc {
-  font-family: 'Avenir Next';
+  font-family: 'Open Sans';
   font-size: 16px;
-  font-weight: 100; }
+  font-weight: 300;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 .image {
-  margin: 29px 0px;
+  bottom: 40px;
+  left: 50%;
+  position: absolute;
   text-align: center;
-  width: 120px; }
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 80px; }
 
 .portrait {
   margin: .5in 0 0 .15in;
