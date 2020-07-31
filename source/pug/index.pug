@@ -32,7 +32,8 @@ head
   link(href='app/app.css' media='screen, projection, print' rel='stylesheet' type='text/css')
   link(rel='icon' type='image/svg+xml' href='app/img/Lower Level icon.svg')
   script(src='app/app.js')
-.page
+button(onclick="toggle()") Toggle
+#main.page
   each beer, key in beers
     .label(id=key)
       h1.title(contenteditable="true" id='title'+key class='content')= beer.title

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Open+Sans:wght@300&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Open+Sans:wght@300&display=swap')
 @page
   margin: 0mm
   size: auto
@@ -25,6 +25,9 @@ body
   &:nth-child(2),
   &:nth-child(3)
     margin-bottom: .2in
+@media only print
+  button
+    display: none
 @media only screen
   .label
     border-radius: 20px
@@ -51,6 +54,11 @@ body
   transform: translate(-50%, 0)
   width: 80px
 
+button
+  position: absolute
+  right: 0
+  top: 0
+  z-index: 1
 .portrait
   margin: .5in 0 0 .15in
   width: 8.5in
@@ -64,3 +72,5 @@ body
       margin-right: .2in
   .title
     margin: .5em 0
+  .desc
+    top: calc(50% - 12px)
