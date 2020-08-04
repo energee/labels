@@ -35,17 +35,21 @@ head
   script(src='app/app.js')
 body#app
   .control-panel
-    button.button.toggle(onclick="toggle()")
-      i.orientation(title="Orientation")
-    #title-adjust.font-adjust
+    div
+      button.button.toggle(onclick="toggle()" title="Orientation")
+        i.orientation
+    div
+      input.file-upload(type='file' onchange="readURL(this)" title="Upload File")
+    #title-adjust
       label(for="title") Title Size
-      input(type="number" id="title" value="50")
-    #description-adjust.font-adjust
+      input.font-adjust(type="number" id="title" value="50")
+    #description-adjust
       label(for="description") Description Size
-      input(type="number" id="description" value="16")
+      input.font-adjust(type="number" id="description" value="16")
   #main.page
     each beer, key in beers
       .label(id=key)
         h1.title(contenteditable="true" id='title'+key class='content')= beer.title
-        figcaption.desc(contenteditable="true" id='desc'+key class='content')= beer.description
+        figcaption.description(contenteditable="true" id='description'+key class='content')= beer.description
+        img.image-upload(src)
         img.image(src="app/img/Lower Level.svg")

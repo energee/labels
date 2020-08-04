@@ -62,10 +62,18 @@ body {
           transform: translate(-50%, 0);
   width: 80px; }
 
+.image-upload {
+  height: auto;
+  text-align: center;
+  top: 0px;
+  width: 80px; }
+
 button {
   cursor: pointer;
   outline: none;
-  padding: 1em 1em; }
+  padding: 1.5em 1.4em; }
+  button #img-upload {
+    width: 25px; }
 
 .orientation {
   display: block;

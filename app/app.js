@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-  let content = document.getElementsByClassName('content');
-  let adjust = document.getElementsByClassName('font-adjust');
-  let contentArray = Array.from(content);
+  let content = document.getElementsByClassName('content'),
+      adjust = document.getElementsByClassName('font-adjust'),
+      contentArray = Array.from(content),
+      adjustArray = Array.from(adjust);
 
   contentArray.forEach((item) => {
     localStore.loadContent(item);
@@ -11,9 +12,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
         localStore.saveContent(item);
       }, false
     );
+  });
+
+  adjustArray.forEach((item) => {
     item.addEventListener(
-      'onchange', () => {
-        localStore.saveContent(item);
+      'click', () => {
+        let adjustThese = document.getElementsByClassName(item.id);
+        for (var i = 0; i < adjustThese.length; i++) {
+          adjustThese[i].style.fontSize = item.value + "px";
+        }
       }, false
     );
   });
@@ -36,4 +43,22 @@ let localStore = {
 let toggle = () => {
   let element = document.getElementById('app');
   element.classList.toggle('portrait');
+}
+
+function readURL(input) {
+  console.log(input.files)
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    console.log(reader)
+    reader.onload = function (e) {
+      var x = document.getElementsByClassName("image-upload");
+      for (var i=0; i < x.length; i++) {
+        x[i].setAttribute(
+          'src',
+          e.target.result
+        );
+      }
+    }
+    reader.readAsDataURL(input.files[0]);
+  };
 }
