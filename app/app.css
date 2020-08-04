@@ -10,6 +10,7 @@
 body {
   -webkit-box-sizing: content;
           box-sizing: content;
+  font-family: 'Open Sans';
   margin: 0;
   padding: 0; }
 
@@ -25,21 +26,12 @@ body {
   float: left;
   height: 4in;
   overflow: hidden;
-  padding: 0 1.3em;
+  padding: 0 .5em;
   position: relative;
   text-align: center;
   width: 3.333in; }
   .label:nth-child(1), .label:nth-child(2), .label:nth-child(3) {
     margin-bottom: .2in; }
-
-@media only print {
-  button {
-    display: none; } }
-
-@media only screen {
-  .label {
-    border-radius: 20px;
-    border: .5px dashed #eee; } }
 
 .title {
   font-family: 'Lora';
@@ -48,16 +40,17 @@ body {
   margin: 40px 0; }
 
 .desc {
-  font-family: 'Open Sans';
   font-size: 16px;
   font-weight: 300;
   left: 50%;
   margin: 0;
+  max-width: calc(100% - 1em);
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+          transform: translate(-50%, -50%);
+  width: 100%; }
 
 .image {
   bottom: 40px;
@@ -70,10 +63,65 @@ body {
   width: 80px; }
 
 button {
+  cursor: pointer;
+  outline: none;
+  padding: 1em 1em; }
+
+.orientation {
+  display: block;
+  -webkit-transition: -webkit-transform .1s ease;
+  transition: -webkit-transform .1s ease;
+  -o-transition: transform .1s ease;
+  transition: transform .1s ease;
+  transition: transform .1s ease, -webkit-transform .1s ease;
+  background: white;
+  border: 2px solid black;
+  border-radius: 0 5px 0 0;
+  height: 17px;
+  position: relative;
+  width: 22px; }
+  .orientation::after {
+    background: black;
+    border: 1px solid black;
+    content: '';
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px; }
+
+.control-panel {
+  margin: 1em;
   position: absolute;
   right: 0;
+  text-align: center;
   top: 0;
   z-index: 1; }
+  .control-panel label {
+    display: block; }
+  .control-panel input {
+    background: transparent;
+    border: 1px solid white;
+    padding: .25em;
+    text-align: center;
+    width: 60px; }
+    .control-panel input::after {
+      content: 'px';
+      display: block; }
+
+@media only print {
+  .control-panel {
+    display: none; } }
+
+@media only screen {
+  body {
+    background-color: #ddd; }
+  .label {
+    background: white;
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0px 0 5px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0px 0 5px rgba(0, 0, 0, 0.05); } }
 
 .portrait {
   margin: .5in 0 0 .15in;
@@ -88,3 +136,7 @@ button {
     margin: .5em 0; }
   .portrait .desc {
     top: calc(50% - 12px); }
+  .portrait .orientation {
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg); }

@@ -1,27 +1,27 @@
 -
   var beers = [
     {
-      title: 'Mary Sue',
+      title: 'Name',
       description: 'description',
     },
     {
-      title: 'Mary Sue',
+      title: 'Name',
       description: 'description',
     },
     {
-      title: 'Mary Sue',
+      title: 'Name',
       description: 'description',
     },
     {
-      title: 'Mary Sue',
+      title: 'Name',
       description: 'description',
     },
     {
-      title: 'Mary Sue',
+      title: 'Name',
       description: 'description',
     },
     {
-      title: 'Mary Sue',
+      title: 'Name',
       description: 'description',
     },
   ]
@@ -30,12 +30,22 @@ head
   title 3.3inch x 4inch labels
   meta(http-equiv='content-type' content='text/html; charset=utf-8')
   link(href='app/app.css' media='screen, projection, print' rel='stylesheet' type='text/css')
+  link(href='app/buttons.css' media='screen' rel='stylesheet' type='text/css')
   link(rel='icon' type='image/svg+xml' href='app/img/Lower Level icon.svg')
   script(src='app/app.js')
-button(onclick="toggle()") Toggle
-#main.page
-  each beer, key in beers
-    .label(id=key)
-      h1.title(contenteditable="true" id='title'+key class='content')= beer.title
-      figcaption.desc(contenteditable="true" id='desc'+key class='content')= beer.description
-      img.image(src="app/img/Lower Level.svg")
+body#app
+  .control-panel
+    button.button.toggle(onclick="toggle()")
+      i.orientation(title="Orientation")
+    #title-adjust.font-adjust
+      label(for="title") Title Size
+      input(type="number" id="title" value="50")
+    #description-adjust.font-adjust
+      label(for="description") Description Size
+      input(type="number" id="description" value="16")
+  #main.page
+    each beer, key in beers
+      .label(id=key)
+        h1.title(contenteditable="true" id='title'+key class='content')= beer.title
+        figcaption.desc(contenteditable="true" id='desc'+key class='content')= beer.description
+        img.image(src="app/img/Lower Level.svg")

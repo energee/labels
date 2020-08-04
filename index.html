@@ -3,33 +3,46 @@
   <title>3.3inch x 4inch labels</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <link href="app/app.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+  <link href="app/buttons.css" media="screen" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/svg+xml" href="app/img/Lower Level icon.svg">
   <script src="app/app.js"></script>
 </head>
-<button onclick="toggle()">Toggle</button>
-<div class="page" id="main">
-  <div class="label" id="0">
-    <h1 class="title content" contenteditable="true" id="title0">Mary Sue</h1>
-    <figcaption class="desc content" contenteditable="true" id="desc0">description</figcaption><img class="image" src="app/img/Lower Level.svg">
+<body id="app">
+  <div class="control-panel">
+    <button class="button toggle" onclick="toggle()"><i class="orientation" title="Orientation"></i></button>
+    <div class="font-adjust" id="title-adjust">
+      <label for="title">Title Size</label>
+      <input type="number" id="title" value="50">
+    </div>
+    <div class="font-adjust" id="description-adjust">
+      <label for="description">Description Size</label>
+      <input type="number" id="description" value="16">
+    </div>
   </div>
-  <div class="label" id="1">
-    <h1 class="title content" contenteditable="true" id="title1">Mary Sue</h1>
-    <figcaption class="desc content" contenteditable="true" id="desc1">description</figcaption><img class="image" src="app/img/Lower Level.svg">
+  <div class="page" id="main">
+    <div class="label" id="0">
+      <h1 class="title content" contenteditable="true" id="title0">Name</h1>
+      <figcaption class="desc content" contenteditable="true" id="desc0">description</figcaption><img class="image" src="app/img/Lower Level.svg">
+    </div>
+    <div class="label" id="1">
+      <h1 class="title content" contenteditable="true" id="title1">Name</h1>
+      <figcaption class="desc content" contenteditable="true" id="desc1">description</figcaption><img class="image" src="app/img/Lower Level.svg">
+    </div>
+    <div class="label" id="2">
+      <h1 class="title content" contenteditable="true" id="title2">Name</h1>
+      <figcaption class="desc content" contenteditable="true" id="desc2">description</figcaption><img class="image" src="app/img/Lower Level.svg">
+    </div>
+    <div class="label" id="3">
+      <h1 class="title content" contenteditable="true" id="title3">Name</h1>
+      <figcaption class="desc content" contenteditable="true" id="desc3">description</figcaption><img class="image" src="app/img/Lower Level.svg">
+    </div>
+    <div class="label" id="4">
+      <h1 class="title content" contenteditable="true" id="title4">Name</h1>
+      <figcaption class="desc content" contenteditable="true" id="desc4">description</figcaption><img class="image" src="app/img/Lower Level.svg">
+    </div>
+    <div class="label" id="5">
+      <h1 class="title content" contenteditable="true" id="title5">Name</h1>
+      <figcaption class="desc content" contenteditable="true" id="desc5">description</figcaption><img class="image" src="app/img/Lower Level.svg">
+    </div>
   </div>
-  <div class="label" id="2">
-    <h1 class="title content" contenteditable="true" id="title2">Mary Sue</h1>
-    <figcaption class="desc content" contenteditable="true" id="desc2">description</figcaption><img class="image" src="app/img/Lower Level.svg">
-  </div>
-  <div class="label" id="3">
-    <h1 class="title content" contenteditable="true" id="title3">Mary Sue</h1>
-    <figcaption class="desc content" contenteditable="true" id="desc3">description</figcaption><img class="image" src="app/img/Lower Level.svg">
-  </div>
-  <div class="label" id="4">
-    <h1 class="title content" contenteditable="true" id="title4">Mary Sue</h1>
-    <figcaption class="desc content" contenteditable="true" id="desc4">description</figcaption><img class="image" src="app/img/Lower Level.svg">
-  </div>
-  <div class="label" id="5">
-    <h1 class="title content" contenteditable="true" id="title5">Mary Sue</h1>
-    <figcaption class="desc content" contenteditable="true" id="desc5">description</figcaption><img class="image" src="app/img/Lower Level.svg">
-  </div>
-</div>
+</body>
