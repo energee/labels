@@ -27,6 +27,7 @@ body {
 .label {
   height: 4in;
   overflow: hidden;
+  padding: 0.5em;
   position: relative;
   text-align: center;
   width: 6in;
@@ -40,14 +41,38 @@ body {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
   bottom: 53px;
-  right: 10px;
+  right: 0;
 }
 
-.title {
+.content {
+  border: none;
+  display: block;
   font-family: "Poppins";
+  font-size: 1.1em;
+  text-align: center;
+  margin: 0.3em auto;
+  width: 100%;
+}
+.content:focus-visible {
+  outline: none;
+}
+.content:-moz-placeholder-shown {
+  background: #ffe2e2;
+}
+.content:-ms-input-placeholder {
+  background: #ffe2e2;
+}
+.content:placeholder-shown {
+  background: #ffe2e2;
+}
+
+#title {
   font-size: 50px;
   font-weight: 500;
-  margin: 40px 0;
+}
+
+#description {
+  font-weight: 600;
 }
 
 .desc {
@@ -75,74 +100,28 @@ body {
   width: 80px;
 }
 
-.image-upload {
-  height: auto;
-  text-align: center;
-  top: 0px;
-  width: 80px;
-}
-
-button {
-  cursor: pointer;
-  outline: none;
-  padding: 1.5em 1.4em;
-}
-button #img-upload {
-  width: 25px;
-}
-
-.orientation {
-  display: block;
-  -webkit-transition: -webkit-transform 0.1s ease;
-  transition: -webkit-transform 0.1s ease;
-  -o-transition: transform 0.1s ease;
-  transition: transform 0.1s ease;
-  transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+footer {
   background: white;
-  border: 2px solid black;
-  border-radius: 0 5px 0 0;
-  height: 17px;
-  position: relative;
-  width: 22px;
-}
-.orientation::after {
-  background: black;
-  border: 1px solid black;
-  content: "";
-  display: block;
-  height: 3px;
+  border-top: 1px solid #c8c8c8;
+  bottom: 0;
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 3px;
+  width: 100%;
 }
 
-.control-panel {
-  margin: 1em;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  z-index: 1;
+.sharelink {
+  padding: 0.5em;
 }
-.control-panel label {
-  display: block;
-}
-.control-panel input {
-  background: transparent;
-  border: 1px solid white;
-  padding: 0.25em;
-  text-align: center;
-  width: 60px;
-}
-.control-panel input::after {
-  content: "px";
-  display: block;
+.sharelink:empty {
+  padding: 0;
 }
 
 @media only print {
-  .control-panel {
+  footer {
     display: none;
+  }
+
+  .content:focus-visible {
+    background: none;
   }
 }
 @media only screen {
@@ -156,20 +135,4 @@ button #img-upload {
     -webkit-box-shadow: inset 0px 0 5px rgba(0, 0, 0, 0.05);
             box-shadow: inset 0px 0 5px rgba(0, 0, 0, 0.05);
   }
-}
-.portrait .label {
-  height: 6in;
-  margin-bottom: 0 !important;
-  width: 4in;
-}
-.portrait .title {
-  margin: 0.5em 0;
-}
-.portrait .desc {
-  top: calc(50% - 12px);
-}
-.portrait .orientation {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
 }

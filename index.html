@@ -8,20 +8,15 @@
   <script src="app/app.js"></script>
 </head>
 <body id="app">
-  <div class="control-panel">
-    <div id="title-adjust">
-      <label for="title">Title Size</label>
-      <input class="font-adjust" type="number" id="title" value="50">
-    </div>
-    <div id="description-adjust">
-      <label for="description">Description Size</label>
-      <input class="font-adjust" type="number" id="description" value="16">
-    </div>
-  </div>
   <div class="page" id="main">
-    <div class="label" id="0">
-      <h1 class="title content" contenteditable="true" id="title0">Name</h1>
-      <figcaption class="description content" contenteditable="true" id="description0">description</figcaption><img class="image-upload" src><img class="image" src="app/img/Lolev_logo.svg">
+    <div class="label">
+      <input class="content" contenteditable="true" id="title" type="text" placeholder="Name">
+      <input class="content bold" contenteditable="true" id="description" type="text" placeholder="Description">
+      <input class="content" contenteditable="true" id="style" type="text" placeholder="Style">
+      <input class="content" contenteditable="true" id="alcohol-content" type="text" placeholder="abv"><img class="image-upload" src><img class="image" src="app/img/Lolev_logo.svg">
     </div>
+    <footer>
+      <div class="sharelink"></div>
+    </footer>
   </div>
 </body>
