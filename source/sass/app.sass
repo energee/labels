@@ -7,8 +7,14 @@
 body
   box-sizing: content
   font-family: 'Poppins'
+  font-weight: bold
+  letter-spacing: 2px
+  text-transform: uppercase
   margin: 0
   padding: 0
+h1
+  font-size: 20px
+  margin-top: 32px
 .page
   margin: .15in 0 0 .5in
   text-align: center
@@ -26,46 +32,32 @@ body
   &:nth-child(2),
   &:nth-child(3)
     margin-bottom: .2in
-  &:after,
-  &:before
-    content: "NOT FOR SALE"
-    font-weight: bold
-    pointer-events: none
-    position: absolute
-    transform: rotate(-45deg)
-    bottom: 53px
-    right: 10px
-  // &:before
-    // left: 20px
-    // top: 0px
-    // content: "PROTOTYPE"
 .title
-  font-family: 'Poppins'
-  font-size: 50px
+  font-size: 18px
+  margin-bottom: 5px
+  margin-top: 230px
+.description
   font-weight: 500
-  margin: 40px 0
-.desc
-  font-size: 16px
-  font-weight: 300
-  left: 50%
-  margin: 0
-  max-width: calc(100% - 1em)
-  position: absolute
-  top: 50%
-  transform: translate(-50%, -50%)
-  width: 100%
 .image
-  bottom: 40px
+  top: 50%
   left: 50%
   position: absolute
   text-align: center
-  transform: translate(-50%, 0)
-  width: 80px
+  transform: translate(-50%, -50%)
+  width: 55px
 .image-upload
   height: auto
   text-align: center
   top: 0px
   width: 80px
+.warning
+  display: block
+  font-size: 6px
+  font-weight: normal
+  letter-spacing: 0
+  text-align: left
+  transform: rotate(-90deg) translate(180px, 120px)
+  width: 330px
 button
   cursor: pointer
   outline: none
@@ -109,16 +101,16 @@ button
     &::after
       content: 'px'
       display: block
-@media only print
-  .control-panel
-    display: none
-@media only screen
-  body
-    background-color: #ddd
-  .label
-    background: white
-    border-radius: 20px
-    box-shadow: inset 0px 0 5px rgba(0, 0, 0, 0.05)
+// @media only print
+//   .control-panel
+//     display: none
+// @media only screen
+//   body
+//     // background-color: #ddd
+//   .label
+//     background: white
+//     // border-radius: 20px
+//     box-shadow: inset 0px 0 5px rgba(0, 0, 0, 0.05)
 
 /////
 // Portrait Mods
@@ -141,3 +133,20 @@ button
     top: calc(50% - 12px)
   .orientation
     transform: rotate(-90deg)
+
+.label:before,
+.label:after
+  content: ""
+  position: absolute
+  height: 100%
+  width: 2px
+  top: 0px
+  background-image: radial-gradient(circle at center, black 1px, transparent 1px), radial-gradient(circle at center, black 1px, transparent 1px)
+  background-size: 2px 2px
+  background-position: top center, bottom center
+  background-repeat: no-repeat
+
+.label:before
+  left: 0px
+.label:after
+  right: 0px

@@ -1,28 +1,28 @@
 -
   var beers = [
     {
-      title: 'Name',
-      description: 'description',
+      title: 'SAISAR',
+      description: 'IMPERIAL SAISON',
     },
     {
-      title: 'Name',
-      description: 'description',
+      title: 'SAISAR',
+      description: 'IMPERIAL SAISON',
     },
     {
-      title: 'Name',
-      description: 'description',
+      title: 'SAISAR',
+      description: 'IMPERIAL SAISON',
     },
     {
-      title: 'Name',
-      description: 'description',
+      title: 'SAISAR',
+      description: 'IMPERIAL SAISON',
     },
     {
-      title: 'Name',
-      description: 'description',
+      title: 'SAISAR',
+      description: 'IMPERIAL SAISON',
     },
     {
-      title: 'Name',
-      description: 'description',
+      title: 'SAISAR',
+      description: 'IMPERIAL SAISON',
     },
   ]
 doctype html
@@ -49,7 +49,8 @@ body#app
   #main.page
     each beer, key in beers
       .label(id=key)
-        h1.title(contenteditable="true" id='title'+key class='content')= beer.title
+        h1 lolev beer
+        img.image(src="app/img/logo.svg")
+        h2.title(contenteditable="true" id='title'+key class='content')= beer.title
         figcaption.description(contenteditable="true" id='description'+key class='content')= beer.description
-        img.image-upload(src)
-        img.image(src="app/img/Lolev_logo.svg")
+        small.warning <b>GOVERNMENT WARNING:</b> (1) According to the Surgeon General, women should not drink alcoholic beverages during pregnancy because of the risk of birth defects. (2) Consumption of alcoholic beverages impairs your ability to drive a car or operate machinery, and may cause health problems.
