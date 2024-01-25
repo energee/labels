@@ -21,11 +21,11 @@ body {
 
 h1 {
   font-size: 20px;
-  margin-top: 32px;
+  margin-top: 39px;
 }
 
 .page {
-  margin: 0.15in 0 0 0.5in;
+  margin: 0.2in 0 0 0.5in;
   text-align: center;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -34,9 +34,8 @@ h1 {
 }
 
 .label {
-  border: 1px solid;
   float: left;
-  height: 4.125in;
+  height: 4.15in;
   overflow: hidden;
   padding: 0 0.5em;
   position: relative;
@@ -81,10 +80,10 @@ h1 {
   font-weight: normal;
   letter-spacing: 0;
   text-align: left;
-  -webkit-transform: rotate(-90deg) translate(180px, 120px);
-      -ms-transform: rotate(-90deg) translate(180px, 120px);
-          transform: rotate(-90deg) translate(180px, 120px);
-  width: 330px;
+  -webkit-transform: rotate(-90deg) translate(180px, -175px);
+      -ms-transform: rotate(-90deg) translate(180px, -175px);
+          transform: rotate(-90deg) translate(180px, -175px);
+  width: 375px;
 }
 
 button {
