@@ -34,6 +34,7 @@ h1 {
 }
 
 .label {
+  border: 1px solid;
   float: left;
   height: 4in;
   overflow: hidden;
@@ -166,26 +167,4 @@ button #img-upload {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-}
-
-.label:before,
-.label:after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 2px;
-  top: 0px;
-  background-image: -o-radial-gradient(center, circle, black 1px, transparent 1px), -o-radial-gradient(center, circle, black 1px, transparent 1px);
-  background-image: radial-gradient(circle at center, black 1px, transparent 1px), radial-gradient(circle at center, black 1px, transparent 1px);
-  background-size: 2px 2px;
-  background-position: top center, bottom center;
-  background-repeat: no-repeat;
-}
-
-.label:before {
-  left: 0px;
-}
-
-.label:after {
-  right: 0px;
 }
